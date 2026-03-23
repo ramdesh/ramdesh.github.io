@@ -17,31 +17,59 @@
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #E6E1E5;
-            background: #1C1B1F;
+            color: #e0aaff;
+            background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
+            position: relative;
             overflow-x: hidden;
         }
 
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,.2)),
+                radial-gradient(2px 2px at 60px 70px, #fff, rgba(0,0,0,.3)),
+                radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0,0,0,.4)),
+                radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,.2)),
+                radial-gradient(2px 2px at 90px 10px, #eee, rgba(0,0,0,.3));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        * {
+            position: relative;
+            z-index: 1;
+        }
+
         header {
-            background: #2B2930;
+            background: rgba(15, 23, 42, 0.85);
             color: white;
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2);
+            border-bottom: 3px solid #00D9FF;
+            box-shadow: 0 8px 32px rgba(0, 217, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         header h1 {
             font-size: 3em;
             margin-bottom: 10px;
-            color: #82B1FF;
-            letter-spacing: 1px;
-            font-weight: 400;
+            color: #00D9FF;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
         }
 
         header p {
             font-size: 1.2em;
-            color: #CAC4D0;
+            color: #b0a0ff;
             margin-bottom: 20px;
             font-weight: 300;
         }
@@ -49,22 +77,24 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 20px;
             margin-top: 20px;
         }
 
         .social-links a {
-            color: #82B1FF;
+            color: #00D9FF;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            padding: 10px 24px;
-            border-radius: 20px;
-            background: rgba(130, 177, 255, 0.08);
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            border-radius: 6px;
         }
 
         .social-links a:hover {
-            background: rgba(130, 177, 255, 0.16);
+            color: #9D4EDD;
+            border-color: #9D4EDD;
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
         }
 
         .container {
@@ -78,76 +108,81 @@
         }
 
         h2 {
-            font-size: 2.2em;
-            color: #E6E1E5;
+            font-size: 2.5em;
+            color: #00D9FF;
             margin-bottom: 30px;
             text-align: center;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
         }
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
+            gap: 30px;
             margin-bottom: 40px;
         }
 
         .project-card {
-            background: #2B2930;
-            border: 1px solid #49454F;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.2);
-            transition: all 0.2s ease;
+            background: rgba(22, 33, 62, 0.6);
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(0, 217, 255, 0.1);
+            transition: all 0.3s ease;
             cursor: pointer;
+            backdrop-filter: blur(10px);
         }
 
         .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 8px 16px rgba(0,0,0,0.3);
-            background: #322F37;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 48px rgba(0, 217, 255, 0.2), inset 0 1px 0 rgba(0, 217, 255, 0.2);
+            border-color: rgba(0, 217, 255, 0.6);
         }
 
         .project-card h3 {
-            color: #82B1FF;
+            color: #9D4EDD;
             margin-bottom: 10px;
-            font-size: 1.4em;
-            font-weight: 500;
+            font-size: 1.5em;
+            letter-spacing: 0.5px;
         }
 
         .project-meta {
             display: flex;
-            gap: 12px;
+            gap: 15px;
             margin: 15px 0;
             flex-wrap: wrap;
         }
 
         .badge {
             display: inline-block;
-            padding: 6px 16px;
-            border-radius: 8px;
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 0.85em;
-            font-weight: 500;
+            font-weight: bold;
         }
 
         .badge-lang {
-            background: rgba(138, 180, 248, 0.12);
-            color: #8AB4F8;
+            background: rgba(0, 217, 255, 0.15);
+            color: #00D9FF;
+            border: 1px solid rgba(0, 217, 255, 0.4);
         }
 
         .badge-stars {
-            background: rgba(253, 214, 99, 0.12);
-            color: #FDD663;
+            background: rgba(157, 78, 221, 0.15);
+            color: #9D4EDD;
+            border: 1px solid rgba(157, 78, 221, 0.4);
         }
 
         .badge-contrib {
-            background: rgba(129, 201, 149, 0.12);
-            color: #81C995;
+            background: rgba(58, 134, 255, 0.15);
+            color: #3A86FF;
+            border: 1px solid rgba(58, 134, 255, 0.4);
         }
 
         .project-description {
-            color: #CAC4D0;
+            color: #b0a0ff;
             margin-bottom: 15px;
             line-height: 1.6;
             font-weight: 300;
@@ -155,19 +190,23 @@
 
         .project-link {
             display: inline-block;
-            background: #82B1FF;
-            color: #0D2B6B;
-            padding: 10px 24px;
-            border-radius: 20px;
+            background: linear-gradient(120deg, #009fdf, #0077be);
+            color: #ffffff;
+            padding: 11px 24px;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.2s ease;
-            border: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
         }
 
         .project-link:hover {
-            background: #B3D4FC;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.2);
+            background: transparent;
+            color: #00D9FF;
+            border-color: #00D9FF;
+            box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
+            transform: translateY(-1px);
         }
 
         .stats {
@@ -178,61 +217,68 @@
         }
 
         .stat-card {
-            background: #2B2930;
-            border: 1px solid #49454F;
+            background: rgba(22, 33, 62, 0.6);
+            border: 2px solid rgba(0, 217, 255, 0.3);
             padding: 30px;
-            border-radius: 16px;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.2);
-            transition: all 0.2s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(0, 217, 255, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .stat-card:hover {
-            background: #322F37;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 8px 16px rgba(0,0,0,0.3);
+            border-color: rgba(0, 217, 255, 0.6);
+            box-shadow: 0 12px 48px rgba(0, 217, 255, 0.2);
         }
 
         .stat-number {
             font-size: 2.5em;
-            font-weight: 500;
-            color: #82B1FF;
+            font-weight: bold;
+            color: #00D9FF;
+            text-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
         }
 
         .stat-label {
-            color: #CAC4D0;
+            color: #b0a0ff;
             margin-top: 10px;
-            font-weight: 400;
+            font-weight: 300;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 15px;
             justify-content: center;
         }
 
         .skill-tag {
-            background: rgba(130, 177, 255, 0.08);
-            color: #82B1FF;
-            border: 1px solid #49454F;
-            padding: 10px 20px;
-            border-radius: 8px;
+            background: rgba(0, 217, 255, 0.1);
+            color: #00D9FF;
+            border: 2px solid rgba(0, 217, 255, 0.4);
+            padding: 11px 24px;
+            border-radius: 4px;
             font-weight: 500;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .skill-tag:hover {
-            background: rgba(130, 177, 255, 0.16);
-            transform: translateY(-1px);
+            border-color: #9D4EDD;
+            color: #9D4EDD;
+            background: rgba(157, 78, 221, 0.1);
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+            transform: translateY(-2px);
         }
 
         footer {
-            background: #2B2930;
-            color: #CAC4D0;
+            background: rgba(15, 23, 42, 0.85);
+            color: #b0a0ff;
             text-align: center;
             padding: 30px 20px;
+            border-top: 3px solid #00D9FF;
             margin-top: 60px;
-            box-shadow: 0 -1px 3px rgba(0,0,0,0.3);
+            box-shadow: 0 -8px 32px rgba(0, 217, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         @media (max-width: 768px) {
@@ -248,15 +294,68 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .parallax-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .parallax-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: 400px 400px;
+            background-repeat: repeat;
+        }
+
+        .parallax-layer-1 {
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(255,255,255,.2)),
+                radial-gradient(1px 1px at 60px 70px, #fff, rgba(255,255,255,.1)),
+                radial-gradient(1px 1px at 50px 50px, #ddd, rgba(255,255,255,.15));
+            opacity: 0.5;
+        }
+
+        .parallax-layer-2 {
+            background-image:
+                radial-gradient(1.5px 1.5px at 130px 80px, #fff, rgba(255,255,255,.2)),
+                radial-gradient(1px 1px at 90px 10px, #eee, rgba(255,255,255,.1)),
+                radial-gradient(2px 2px at 130px 130px, #fff, rgba(255,255,255,.15));
+            opacity: 0.3;
+        }
+
+        .parallax-layer-3 {
+            background-image:
+                radial-gradient(1px 1px at 200px 200px, #e0aaff, rgba(224,170,255,.15)),
+                radial-gradient(1.5px 1.5px at 50px 200px, #00D9FF, rgba(0,217,255,.1)),
+                radial-gradient(1px 1px at 300px 100px, #9D4EDD, rgba(157,78,221,.1));
+            opacity: 0.4;
+        }
     </style>
 </head>
 <body>
+    <div class="parallax-container">
+        <div class="parallax-layer parallax-layer-1"></div>
+        <div class="parallax-layer parallax-layer-2"></div>
+        <div class="parallax-layer parallax-layer-3"></div>
+    </div>
     <header>
         <h1>Ramindu Deshapriya</h1>
         <p>Full Stack Developer | Python | JavaScript | PHP | Cloud Infrastructure</p>
         <div class="social-links">
+            <a href="https://github.com/ramdesh" target="_blank">GitHub</a>
             <a href="https://github.com/ramdesh?tab=repositories" target="_blank">View All Projects</a>
-            <a href="sinhala-stories/">Sinhala Sci-Fi Stories</a>            <a href="https://rsdeshapriya.com" target="_blank">My Tech Blog</a>
+            <a href="open-source.html">Open Source Contributions</a>
+            <a href="sinhala-stories/">Sinhala Sci-Fi Stories</a>
+            <a href="https://rsdeshapriya.com" target="_blank">My Tech Blog</a>
         </div>
     </header>
 
@@ -378,8 +477,8 @@
 
         <section>
             <h2>💡 About Me</h2>
-            <div style="background: #2B2930; border: 1px solid #49454F; padding: 30px; border-radius: 16px; text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.2);">
-                <p style="font-size: 1.1em; line-height: 1.8; color: #CAC4D0; font-weight: 300;">
+            <div style="background: rgba(22, 33, 62, 0.6); border: 2px solid rgba(0, 217, 255, 0.3); padding: 30px; border-radius: 8px; text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(0, 217, 255, 0.1); backdrop-filter: blur(10px);">
+                <p style="font-size: 1.1em; line-height: 1.8; color: #b0a0ff; font-weight: 300;">
                     I've worked on a variety of projects and technologies. I love to claim that I can pick up any technology and adapt to it and work with it within a short period of time, and I hope my portfolio speaks to that.
                 </p>
             </div>
@@ -388,14 +487,33 @@
 
     <footer>
         <p>&copy; 2026 Ramindu Deshapriya. All rights reserved.</p>
-        <p><a href="https://rsdeshapriya.com" style="color: #82B1FF; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.color='#B3D4FC';" onmouseout="this.style.color='#82B1FF';">GitHub</a></p>
+        <p><a href="https://rsdeshapriya.com" style="color: #00D9FF; text-decoration: none; transition: all 0.3s ease; text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);" onmouseover="this.style.color='#9D4EDD'; this.style.textShadow='0 0 15px rgba(157, 78, 221, 0.5)';" onmouseout="this.style.color='#00D9FF'; this.style.textShadow='0 0 10px rgba(0, 217, 255, 0.3)';">GitHub</a></p>
     </footer>
 
     <script>
-        // Smooth hover elevation for cards
-        document.querySelectorAll('.project-card, .stat-card').forEach(card => {
-            card.addEventListener('mouseenter', () => card.style.transition = 'all 0.2s ease');
-            card.addEventListener('mouseleave', () => card.style.transition = 'all 0.2s ease');
+        const parallaxLayers = document.querySelectorAll('.parallax-layer');
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            parallaxLayers.forEach((layer, index) => {
+                const depth = (index + 1) * 0.5;
+                const yOffset = scrollY * depth;
+                layer.style.transform = `translateY(${yOffset}px)`;
+            });
+        });
+
+        // Optional: Add subtle mouse parallax for additional depth
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            parallaxLayers.forEach((layer, index) => {
+                const depth = (index + 1) * 10;
+                const xOffset = (mouseX - 0.5) * depth;
+                const yOffset = (mouseY - 0.5) * depth;
+                layer.style.backgroundPosition = `${xOffset}px ${yOffset}px`;
+            });
         });
     </script>
 </body>
