@@ -17,6 +17,8 @@ def get_title_from_html(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     return soup.title.string.strip() if soup.title else None
 
+# Test sync regression
+# This comment is added to verify paths-ignore in GitHub Actions.
 def test_sync():
     print("Starting regression tests for live site synchronization...")
     all_passed = True
