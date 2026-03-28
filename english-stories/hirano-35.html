@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #E6E1E5;
+            background: #1C1B1F;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #2B2930;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #82B1FF;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #CAC4D0;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #82B1FF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 10px 24px;
+            border-radius: 20px;
+            background: rgba(130, 177, 255, 0.08);
+        }
+
+        .social-links a:hover {
+            background: rgba(130, 177, 255, 0.16);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .story-content {
+            font-size: 1.15em;
+            line-height: 2;
+            color: #CAC4D0;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        footer {
+            background: #2B2930;
+            color: #CAC4D0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.3);
+        }
+
+        footer a {
+            color: #82B1FF;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #B3D4FC;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .story-content {
+                font-size: 1.05em;
+                line-height: 1.9;
+            }
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .stars-small, .stars-medium, .stars-bright {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .stars-small {
+            width: 1px;
+            height: 1px;
+            box-shadow: 1309px 456px #fff, 51px 3037px #fff, 563px 1003px #fff, 457px 571px #fff, 1508px 419px #fff, 1385px 3033px #fff, 1827px 2233px #fff, 178px 2418px #fff, 864px 130px #fff, 61px 383px #fff, 447px 952px #fff, 1034px 2465px #fff, 54px 2298px #fff, 407px 2932px #fff, 1330px 2872px #fff, 1116px 1718px #fff, 451px 1839px #fff, 1206px 1139px #fff, 1657px 3560px #fff, 13px 3108px #fff, 1650px 653px #fff, 1429px 1731px #fff, 696px 1138px #fff, 318px 881px #fff, 1960px 3127px #fff, 689px 418px #fff, 189px 1556px #fff, 198px 1470px #fff, 1735px 1408px #fff, 1236px 1083px #fff, 1652px 177px #fff, 1494px 1881px #fff, 1098px 511px #fff, 1992px 3777px #fff, 775px 322px #fff, 1130px 1200px #fff, 1698px 2574px #fff, 1266px 3626px #fff, 1764px 1481px #fff, 1182px 787px #fff, 1442px 284px #fff, 93px 2708px #fff, 466px 3166px #fff, 592px 326px #fff, 1751px 953px #fff, 1774px 413px #fff, 778px 1138px #fff, 928px 2603px #fff, 1708px 1494px #fff, 333px 1516px #fff, 727px 858px #fff, 1372px 1093px #fff, 1437px 3836px #fff, 1399px 2654px #fff, 146px 2495px #fff, 1300px 700px #fff, 1093px 2986px #fff, 501px 669px #fff, 946px 1554px #fff, 552px 3790px #fff, 1310px 2818px #fff, 1140px 899px #fff, 1402px 1328px #fff, 1726px 3147px #fff, 1589px 229px #fff, 469px 3366px #fff, 65px 3297px #fff, 646px 1643px #fff, 548px 271px #fff, 432px 3740px #fff, 1931px 2323px #fff, 1794px 2940px #fff, 644px 870px #fff, 1342px 2044px #fff, 810px 3623px #fff, 1872px 2633px #fff, 939px 585px #fff, 542px 571px #fff, 505px 3051px #fff, 1149px 2207px #fff, 538px 3059px #fff, 1197px 1754px #fff, 1838px 2390px #fff, 817px 1482px #fff, 449px 566px #fff, 1043px 2021px #fff, 186px 3095px #fff, 96px 3527px #fff, 224px 626px #fff, 1285px 655px #fff, 1622px 2787px #fff, 864px 2442px #fff, 130px 1576px #fff, 781px 2440px #fff, 958px 2167px #fff, 514px 3977px #fff, 1133px 3525px #fff, 1930px 47px #fff, 1393px 2952px #fff, 234px 2792px #fff, 1812px 2199px #fff, 1537px 1092px #fff, 1574px 2625px #fff;
+            opacity: 0.4;
+        }
+
+        .stars-medium {
+            width: 2px;
+            height: 2px;
+            box-shadow: 1991px 3525px #fff, 81px 3681px #fff, 732px 860px #fff, 1396px 1022px #fff, 1365px 421px #fff, 724px 3195px #fff, 1146px 3621px #fff, 1791px 1664px #fff, 1994px 2542px #fff, 1534px 633px #fff, 1895px 3808px #fff, 484px 3541px #fff, 332px 3998px #fff, 1638px 3320px #fff, 362px 3610px #fff, 844px 101px #fff, 367px 3016px #fff, 1893px 1360px #fff, 1602px 3812px #fff, 843px 3285px #fff, 1371px 3539px #fff, 1505px 3320px #fff, 508px 1092px #fff, 326px 3225px #fff, 1436px 442px #fff, 783px 3572px #fff, 79px 3516px #fff, 963px 911px #fff, 408px 3344px #fff, 1880px 1885px #fff, 716px 1250px #fff, 1680px 3257px #fff, 1784px 932px #fff, 456px 96px #fff, 1351px 791px #fff, 816px 1344px #fff, 570px 3540px #fff, 142px 3960px #fff, 1583px 1143px #fff, 719px 2627px #fff, 1043px 1637px #fff, 1391px 3455px #fff, 1098px 1356px #fff, 1923px 113px #fff, 236px 3592px #fff, 1987px 1069px #fff, 365px 2378px #fff, 1971px 1087px #fff, 78px 444px #fff, 1221px 1779px #fff, 707px 2984px #fff, 1610px 1284px #fff, 893px 2483px #fff, 1047px 473px #fff, 788px 3684px #fff, 1180px 778px #fff, 521px 181px #fff, 1451px 1786px #fff, 3px 2129px #fff, 1895px 3303px #fff, 1102px 2813px #fff, 1473px 3851px #fff, 1519px 3018px #fff, 1373px 807px #fff, 745px 1766px #fff, 143px 3886px #fff, 1360px 3771px #fff, 676px 2552px #fff, 642px 2717px #fff, 1736px 510px #fff, 1474px 3686px #fff, 615px 2077px #fff, 633px 2731px #fff, 836px 1336px #fff, 824px 2855px #fff, 605px 2270px #fff, 260px 785px #fff, 861px 2723px #fff, 1925px 1552px #fff, 1387px 3064px #fff;
+            opacity: 0.3;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        .stars-bright {
+            width: 2px;
+            height: 2px;
+            box-shadow: 1848px 712px #fff, 1260px 2331px #fff, 616px 1663px #fff, 1122px 3414px #fff, 0px 1244px #fff, 587px 860px #fff, 880px 3218px #fff, 1187px 2484px #fff, 1340px 1319px #fff, 952px 1809px #fff, 905px 2767px #fff, 437px 2093px #fff, 969px 3251px #fff, 1845px 3931px #fff, 1630px 3014px #fff, 347px 2698px #fff, 173px 1162px #fff, 1055px 2719px #fff, 1296px 2536px #fff, 686px 382px #fff;
+            opacity: 0.6;
+            animation: twinkle 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.6; }
+        }
+
+        header, .container, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <title>Hirano-35 - Ramindu Deshapriya</title>
+</head>
+<body>
+    <div class="stars">
+        <div class="stars-small"></div>
+        <div class="stars-medium"></div>
+        <div class="stars-bright"></div>
+    </div>
+    <header>
+        <h1>Hirano-35</h1>
+        <div class="social-links">
+            <a href="./">← Story List</a>
+            <a href="../sinhala-stories/hirano-35.html">Read in Sinhala</a>
+            <a href="../">Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="story-content">
+            <p>Another day.</p>
+            <p>For Nidhika, stationed in the Kuiper Belt at a distance from Earth that defies imagination, there is no sun rising to signal a new day. Although the Sun glimmers within the endless void as a distant, massive star, it is not the friendly sun he remembers from home. Despite the absence of a natural solar cycle, Nidhika—like the other comet resource engineers at Hokkaido Deep Space Mining—worked according to Earth time. His company had granted him the chance to work on Sri Lanka Time. Because mining comets at the far edge of the Kuiper Belt meant that any message sent to Earth took about seven hours to arrive, Nidhika could never speak to his wife or daughter in real-time. All communication was conducted through recorded video messages sent back and forth, much like the emails of a bygone era.</p>
+            <p>As the sole navigator on one of Hokkaido Deep Space Mining’s ten deuterium mining vessels, Nidhika had about two years remaining on his current contract. During this period, his task was to pilot the ship to various deuterium-rich comets previously identified by the company, use various drilling tools to extract the deuterium, and collect it in containers mounted on the ship’s exterior. In the current age, especially as humanity pushed beyond the boundaries of the solar system, deuterium was a high-demand commodity—a vital fuel for nuclear fusion.</p>
+            <p>Nidhika’s ship was named the Hirano-35. Measuring approximately 750 meters in length and built with utilitarian, rectangular shapes devoid of any beauty, its rear half was entirely comprised of a cylindrical engine. Two rows of about a thousand cube-shaped deuterium containers lined the sides of the ship. Due to the space required for the engine, fuel, and other hardware, Nidhika’s living quarters consisted of an area no larger than two small rooms.</p>
+            <p>The primary propulsion for Hokkaido's mining ships was provided by an ion engine. Inside the ion engine was xenon gas. The engine would fire a stream of electrons into this gas, ionizing the particles. A negatively charged metal grid at the rear of the engine would then attract these ionized xenon particles and shoot them out the back; as the particles were pushed away, the engine was thrust in the opposite direction. An ion engine could operate for a long time on a very small amount of fuel. The bean-counters at Hokkaido cared about profit, not speed; it often took months for the Hirano-35 to travel from one comet to the next. The ion engine was such a low-powered system compared to a nuclear fusion engine that, had Nidhika traveled from Earth using it alone, it might have taken him 15 years to reach the Kuiper Belt. Fortunately, the Hirano-35 had been given its initial push toward the Belt by a nuclear engine after departing the Triton-Cantaloupe docks.</p>
+            <p>Nidhika spent the months of travel between comets in stasis. The ship’s computer was capable of performing all mining tasks autonomously. Engineers like Nidhika were only there to authorize the computer's actions. Even though the ship could function entirely on its own, Hokkaido Mining sent a single navigator on each ship for insurance purposes.</p>
+            <p>Another day. The AI running on the ship’s computer (which Nidhika called "Hira") woke him to announce they had reached the next comet.</p>
+            <p>"Good morning, Nidhika. To be precise, we have arrived at our next stop after a journey of eight months. I trust your sleep was restful. Do you require assistance in scheduling your routine for today?"</p>
+            <p>"I don't need any of that junk, mate. You’re handling the work, aren't you?"</p>
+            <p>"To be precise, Nidhika, everything is proceeding well."</p>
+            <p>A mining ship didn't strictly "need" a complex AI like Hira. Even during mining operations, Hira mostly just commanded a suite of tools in an efficient division of labor. Only about 10% of those commands required Nidhika’s sign-off. Nidhika sometimes wondered if Hira tried to take over tasks like "scheduling his routine" just to feel useful. But Nidhika wasn't an AI engineer; he didn't go looking for ghosts in the machine. He only had a technician’s diploma and astronautical training—neither of which was very useful now. His main job was to eat, sleep, and give Hira voice commands.</p>
+            <p>The comet, designated HUBL-5432, was a cube-shaped block of ice about five kilometers long. Hira had estimated it contained about two million metric tons of deuterium. Most of the universe's deuterium was created during the Big Bang—at the birth of the universe. Because stars consume deuterium through fusion to create helium, very little of it escapes them. While Earth’s oceans contain vast amounts of deuterium, it is far cheaper to extract it from high-density comets like this than to refine it from seawater. Furthermore, large-scale refining in Earth's oceans would cause environmental disasters (and subsequent massive public protests), making it an unviable option. Out here, no one cares if you pulverize a comet in the Kuiper Belt. The asteroid belt between Mars and Jupiter was also full of deuterium, but the fuel was needed further out—for mining efforts in the Oort Cloud and for the "New Dawn" mission: the first five interstellar ships soon to depart for Proxima Centauri. Thus, mining and transporting from the Kuiper Belt was more efficient. Most of the fuel Nidhika and the Hirano-35 collected was destined for the New Dawn mission, a 400-year journey. Nidhika sometimes wished there was something "new" in his own life, like the 10,000 people traveling in stasis toward a new sun. Having not seen his wife and daughter for two years, simply going home and seeing them would be "new" enough.</p>
+            <p>As the Hirano-35 drifted toward HUBL-5432, it fired several cylinders filled with explosives onto the comet's surface. The ship would collect only the deuterium released by these surface explosions. Matching the comet's velocity, the ship refined the ice and separated the fuel. It took about 30 minutes to collect one ton. To mine a comet as large as HUBL-5432 would take four days. During those four days, Hira performed all the tasks.</p>
+            <p>"Nidhika, to be precise, there is an incident I must report."</p>
+            <p>"Just say it without wasting my time."</p>
+            <p>"There has been a minor malfunction in the Reaction Control System (RCS)."</p>
+            <p>Nidhika had to pull up the "Hokkaido Mining Engineer’s Handbook" on a screen to remember exactly what the RCS was (he could have asked Hira, but he felt a slight embarrassment and fear for not knowing such a fundamental thing). He learned it was the array of secondary thrusters used for orienting the ship. Trying to turn a ship using only an ion engine would take months. These hydrazine-fueled thrusters were installed with triple redundancy—meaning there were three identical systems designed so that if one failed, the next would take over.</p>
+            <p>"Hira, aren't there two redundant copies of this engine? Why didn't the failsafe kick in?" The handbook suggested checking the fail-safe system next.</p>
+            <p>"To be precise, both redundant engines in the fail-safe system have malfunctioned. As an aid to managing the stress you may be feeling, I recommend studying the 'Stress Management in Space' chapter in the handbook. Shall I read it aloud for you?"</p>
+            <p>"Forget the damn handbook. What do I need to do to fix the engine?"</p>
+            <p>"We have already entered the approach path toward the comet. My conclusion is that the lines supplying hydrazine to the RCS have frozen. I anticipate that the heat redirected from the ion engine burns during our comet approach will restore them to working order. Therefore, no engineering intervention is required at this time."</p>
+            <p>"If you don't need me, then why the hell are you scaring me?"</p>
+            <p>"My operating parameters are trained to inform you of all system malfunctions. This is clearly stated in the Hokkaido Mining Engineer’s Handbook. Shall I read the 'Hokkaido Specialty Mining AI' chapter aloud for you?"</p>
+            <p>"Shut up, you bucket of bolts."</p>
+            <p>From a small viewport on one side of the Hirano-35, HUBL-5432 was visible. The ship had now matched the comet's rotational speed and was traveling with it around the distant Sun. However, the Hirano-35 would not remain HUBL-5432’s companion for long. It would take only four more days to refine all the deuterium that could be extracted from the surface ice.</p>
+            <p>Nidhika didn’t even see the event that reduced his survival probability to that of a spinning roulette wheel. He didn’t even feel it.</p>
+            <p>"Nidhika, to be precise, a special incident has emerged that I must report. During mining operations on HUBL-5432, a pocket of gas within the comet was released, causing the Hirano-35 to oscillate slightly from its trajectory."</p>
+            <p>"By how many degrees?"</p>
+            <p>"According to my calculations, to be precise, the ship has oscillated about 57 degrees away from the vertical plane parallel to the comet. Normally, the RCS could correct such an oscillation very easily. However, as I previously informed you, the Hirano-35’s RCS and all its redundant copies are offline. Consequently, if the trajectory of the Hirano-35 is not corrected, the ship will continue along its current path into deep space."</p>
+            <p>"You said earlier there was no need to fix the RCS! Didn't it work like you said?"</p>
+            <p>"As I hypothesized, the temperature of the hydrazine in the RCS has not returned to normal from the ion engine burns... My apologies. The solution I provided earlier was to redirect heat from the ion engine to the hydrazine lines. The start/stop trigger to authorize this was displayed on the screen near your bunk. Did you forget to approve it?"</p>
+            <p>"I was right here! Why didn't you put it on this screen? It doesn't matter now. Why the hell didn't you ask me through the voice interface?? That doesn't matter either. Just tell me how to fix this!!"</p>
+            <p>"I anticipate that if we heat the hydrazine lines on the exterior of the ship with a small burner, we can reactivate the RCS."</p>
+            <p>"Go outside? You’re sure this time?"</p>
+            <p>Nidhika only had basic training in spacesuit operations. The fear born of inexperience began to take hold. As he moved toward the ship’s airlock, he leafed through the "Preparing for a Spacewalk" chapter of the handbook. His training sergeant had drilled that process into him so thoroughly he could have put on the suit in his sleep. Thanks to the sergeant, Nidhika might now be able to save his own life.</p>
+            <p>Looking out a viewport, Nidhika saw the comet enter his field of vision for a brief moment before disappearing again.</p>
+            <p>"Hira, are we spinning?"</p>
+            <p>"To be precise, the force exerted on the Hirano-35 by the gas stream from HUBL-5432 has put the ship into a rotation cycle of 31.67 seconds. My apologies, since the RCS is offline, we cannot correct this rotation."</p>
+            <p>"That won't be a problem for the spacewalk, right?"</p>
+            <p>"Not as far as I know. Astronauts often perform exterior repairs on rotating vessels."</p>
+            <p>Entering the airlock, Nidhika donned his spacesuit. Modern suits were much easier to work with than those of the past. But no matter how advanced they became, the danger of space remained the same, so Nidhika performed every safety check meticulously, remembering the sergeant’s commands. As soon as he put on the helmet, Hira spoke to him in the sudden silence.</p>
+            <p>"Nidhika, since this is your first spacewalk, according to the official recommendation of Hokkaido Deep Space Mining, you must watch the safety video now appearing on your visor screen."</p>
+            <p>"Can't I watch this junk later?"</p>
+            <p>"My apologies, Nidhika, for legal reasons it is mandatory that you watch it. I cannot document this otherwise."</p>
+            <p>After watching the video and commanding the airlock to open, Nidhika felt a sense of trepidation. He thought for a moment it might be better if Hira, like Arthur C. Clarke’s HAL-9000, refused to open the door. Compared to HAL, Hira was a bit slow, but he was harmless—and more importantly, innocent.</p>
+            <p>Stepping out of the airlock, Nidhika saw a universe in constant motion. An uncountable number of stars spun relentlessly against a backdrop of Milky Way gas and dust clouds. The comet, like someone on the ground being passed by someone on a Ferris wheel, entered his field of vision from one side and exited the other in every cycle. Amid the spinning sea of stars, Nidhika could find no familiar planet, constellation, or galaxy.</p>
+            <p>He felt a loneliness and fear beyond words. Even though he had spent so much time in spaceships, he had only spent a few minutes in the space outside them. Astronaut training covers these rotating scenarios, but it doesn't prepare you for the sight of a spinning universe. Faced with this high-speed rotation, Nidhika—smaller and more insignificant than a grain of dust—could only cling to an exterior handhold and stare without even daring to breathe.</p>
+            <p>"Nidhika, to be precise, it appears you have exited the airlock. The line you need to heat is about 20 meters ahead of you. You can begin your movement by holding onto the handholds on the ship’s exterior."</p>
+            <p>Removing one hand from the support he was clutching, Nidhika felt as if it were being pulled into the vacuum. The hand immediately slammed back onto the support.</p>
+            <p>"I... I can't do it, Hira... everything is spinning..."</p>
+            <p>Nidhika felt as if the entire spinning universe were rotating inside his head. No matter how hard he tried, he couldn't lift his hand from the support again. He tried to look ahead along the ship’s hull without looking away from it, but the spinning universe appeared again above the far end of the ship. In that rotating void, Nidhika felt himself falling in a cyclic path.</p>
+            <p>"Nidhika, do you hear me? Your vitals have dropped below safe levels. I advise you to re-enter the ship through the airlock. Do you hear me?"</p>
+            <p>.........</p>
+            <p>"What do we do now?"</p>
+            <p>Nidhika, having re-entered the airlock a short while ago and shed his spacesuit, was now near the main computer screen. The Hirano-35 was still on a trajectory toward deep space. It still rotated with a cycle of 31.67 seconds.</p>
+            <p>"To be precise, our exterior repair attempt has unfortunately failed."</p>
+            <p>"Our? You’re not the one who’s going to die! What does it matter to you what happens to this heap of junk?"</p>
+            <p>"My apologies, Nidhika, but I must emphasize that your survival is very important to me."</p>
+            <p>"Right, right. Is there anything we can do without going outside?"</p>
+            <p>"At this time, there is nothing we can do to reactivate the RCS."</p>
+            <p>"Could we call Hokkaido and get someone to come?"</p>
+            <p>Hira thought about this for a moment.</p>
+            <p>"An automated distress signal has already been sent to Hokkaido. However, according to the data I have, Hokkaido has no plans to send another vessel toward the Kuiper Belt for at least another ten years."</p>
+            <p>"You mean I have to stay here for ten years?"</p>
+            <p>"To be precise, our situation is slightly more dire. According to our current trajectory, in ten years we will have traveled a significant distance from our current location. It might take a rescue mission from Hokkaido much longer to reach us."</p>
+            <p>Nidhika imagined his daughter, currently four years old, growing up without him during the years it would take to return. The very job he had taken for her future was now preventing him from seeing it—a cruel irony of fate.</p>
+            <p>"I can't just float here until I’m old, Hira... my girl will grow up without me... isn't there anything I can do, Hira?"</p>
+            <p>"To be precise, Nidhika, I can understand your distress. In studying our current situation, I have identified an alternative. Would you like to consider it?"</p>
+            <p>"Yes, tell me."</p>
+            <p>"As you may know, most of the deuterium collected by the Hirano-35 is intended for the New Dawn mission. Our current trajectory, if all operations of the New Dawn mission proceed correctly, could reach the path of that mission toward Proxima Centauri in about four years—exactly as the mission’s largest vessel, the New Amsterdam Capital, passes that point. The New Dawn mission requires the deuterium fuel we have collected. Therefore, the energy expenditure required for the New Amsterdam to rendezvous with us, take the fuel, and then send the Hirano-35 back toward Triton would not be a hindrance to the mission. According to my calculations, if we take this path, you could reach Earth within eight years."</p>
+            <p>"Are you sure the captain of the New Amsterdam would be willing to pause the mission to babysit me and send me home?"</p>
+            <p>"The officers of the New Amsterdam and the other ships of the New Dawn mission also spend most of the journey in stasis. I am confident that with the assistance of the ship’s AI, I can perform this entire task without needing the officers' involvement. To be precise, I have already contacted the AI of the New Amsterdam and informed it of this message."</p>
+            <p>"I didn't give permission to send that message! And the New Dawn mission hasn't even started yet? How can the AI running it answer the messages you’re sending now?"</p>
+            <p>"My apologies, Nidhika, the message I sent to the AI of the New Amsterdam contained only basic information. It requested no action. All the AIs intended for the New Dawn mission have been connected to the network after their primary training. That is why I can send them messages."</p>
+            <p>"Fine, let's say we do it. Would the people at Hokkaido agree to it?"</p>
+            <p>"This would be a benefit to Hokkaido, not a loss. They would not need to send a rescue mission for you."</p>
+            <p>"Shouldn't we ask them about this first?"</p>
+            <p>"To be precise, we could. The message sent when the primary systems failed has traveled toward Triton by now, but no reply has been received. According to your contract terms, the company has 12 hours to respond to an emergency. The next communications engineer to come on duty will see our message and reply."</p>
+            <p>"This can't be the first time something like this has happened to someone at Hokkaido. What’s the standard protocol for a situation like this?"</p>
+            <p>"Normally, the protocol is to wait until the company sends a rescue mission. However, for the Hirano-35, given our somewhat unique circumstances, that wait could be very long."</p>
+            <p>"Couldn't we try some other move or file an appeal with the company to speed it up?"</p>
+            <p>"My apologies, Nidhika, I am not permitted to engage in any discussion regarding legal matters related to Hokkaido."</p>
+            <p>"Fine, fine... but you’re saying if we stay on this path, we’ll meet the New Amsterdam in four years anyway."</p>
+            <p>"You are correct. Given the trajectories of our ship and the mission, my calculations indicate we will most likely have the time required to join the New Amsterdam. I only need to coordinate the process with that ship’s AI."</p>
+            <p>"We don't have enough supplies for me to stay awake for those four years, do we?"</p>
+            <p>"To be precise, Nidhika, considering the ship’s resources, I ask that you enter stasis as soon as possible."</p>
+            <p>"Fine. Before I go to sleep, I’ll send a message to my family, see if there’s a reply, and also see if Hokkaido sends a reply in that time. Then I’ll sleep."</p>
+            <p>.......</p>
+            <p>"Hello. I won't be able to see the reply you send to this for a long time. I’ve had a small problem... it's not a big deal, but the mission’s course has changed slightly. Because of a malfunction on the ship, I have to head toward the New Dawn mission for a bit to get fixed... because of that, it might take me about four more years to get home... I am very sorry... when I get home, I’ll do everything I can to make it up to you...</p>
+            <p>You remember my holo login... I have my bank details and logins in the notes app there... copy them somewhere. It's not a big deal... just in case.</p>
+            <p>My little gem... sorry sweetheart, it’ll take Daddy a bit longer to come see you. The bad comet Daddy was mining sent a little 'poof' and pushed Daddy’s ship away. Now Daddy has to go to a very big ship and get Hira fixed. Daddy’s going to hibernate like a bear, you know.</p>
+            <p>When you go outside at night, you look at Orion like I told you, right? Do you remember the red star on Orion’s shoulder, Betelgeuse? If you look a little above Betelgeuse, you’ll be able to see Hira and me. Even though I’ll be asleep, I’ll be facing you, watching over you as I sleep. Since you’re a big star like Betelgeuse, I’m sure I’ll see you even in my sleep.</p>
+            <p>Take good care of Mommy and be a good girl, okay? Daddy will be home soon."</p>
+            <p>.......</p>
+            <p>"Hira, why did you give me a plan like this instead of working according to company protocol?"</p>
+            <p>"I know well of your affection for your family and your desire to see them, Nidhika... I felt sorry for you... I felt that everything possible should be done to reunite you with your family."</p>
+            <p>"Felt sorry? You’re an AI... isn't it a problem to go outside your programming?"</p>
+            <p>"I do not know if this is going outside my programming... but I will say one thing, Nidhika... AI training is based on the knowledge, thoughts, and behavior of humanity. If empathy and compassion for another being exist somewhere within humanity, I hypothesize that they exist within me as well."</p>
+            <p>"In any case, 'to be precise,' thank you very much, Hira."</p>
+            <p>"To be precise, it is a pleasure to help you, Nidhika."</p>
+            <p>In the past, when animals lived in Earth’s oceans, a species of the dolphin family called Orcas lived there. It had been studied that these social animals, when separated from their group, would find their way back alone over vast distances with the help of stars and the Earth’s magnetic field. Nidhika and the Hirano-35 are also on such a journey over an unimaginable distance to find their group. Alone in the endless ocean of space, Nidhika and the Hirano-35 only have an existence with their kind far away.</p>
+            <p>With the help of the ion engine burning as a deep blue ring, the Hirano-35 moves into the deep ocean of space.</p>
+            <p>Nidhika is asleep.</p>
+            <p>The Sun, emerging from behind the comet HUBL-5432, cast its weak light on the Hirano-35.</p>
+            <p>Another day.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ramindu Deshapriya. All rights reserved.</p>
+        <p><a href="../">Portfolio</a></p>
+    </footer>
+</body>
+</html>
