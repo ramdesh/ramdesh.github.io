@@ -1,4 +1,4 @@
-"Savindra, there's a small problem over at the refinery. Could you come take a look for five minutes?"
+"Savindra, there's a small problem over at the refinery. Could you come in for 5 minutes and sort it out?"
 
 That's exactly how my day off got wrecked.
 
@@ -8,7 +8,7 @@ By then I'd been working at the Triton-Cantaloupe base for about eight years. Wh
 
 "Can't John take a look?" I sent back a reply to the supervisor's holo message. John's the guy covering my shift today.
 
-"He did look at something. But it didn't work out. He's not sure about it until you come and check. Come on, you can probably fix this quickly. Just come take a look, will you."
+"He did look at something. But it didn't work out. He said he’s not sure without your input. Come on, you can probably fix this quickly. Could you please come and take a quick look."
 
 I'd written a little app so I could check the state of the deuterium refinery machinery from the holo whenever I wanted. Figuring I'd look at the situation through that, tell John some way to fix it, and stay in without letting my day off get smashed to bits, I opened the app without replying to the supervisor. The pressure in the liquid deuterium in the third liquefaction unit had dropped. The deuterium we receive as ice has to be separated out from other components like hydrogen, packed into high-pressure chambers, and chilled — only then can it be sent off for use. If the pressure drops anywhere in here, the amount of deuterium we can ship out per day goes down.
 
