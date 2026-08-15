@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDFMDXD22B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LDFMDXD22B');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #E6E1E5;
+            background: #1C1B1F;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #2B2930;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #82B1FF;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #CAC4D0;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #82B1FF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 10px 24px;
+            border-radius: 20px;
+            background: rgba(130, 177, 255, 0.08);
+        }
+
+        .social-links a:hover {
+            background: rgba(130, 177, 255, 0.16);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .story-content {
+            font-size: 1.15em;
+            line-height: 2;
+            color: #CAC4D0;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        .story-divider {
+            border: none;
+            border-top: 1px solid #49454F;
+            margin: 2em auto;
+            width: 60%;
+        }
+
+        .story-figure {
+            margin: 2.5em auto;
+            max-width: 800px;
+        }
+
+        .story-figure img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .story-figure figcaption {
+            margin-top: 0.75em;
+            font-size: 0.85em;
+            line-height: 1.5;
+            color: #9E9AA7;
+            text-align: center;
+        }
+
+        .story-figure figcaption .credit {
+            display: block;
+            font-size: 0.9em;
+            color: #7C7889;
+        }
+
+        .ship-announcement {
+            margin: 2em auto;
+            padding: 16px 20px;
+            max-width: 700px;
+            border-left: 3px solid #82B1FF;
+            background: rgba(130, 177, 255, 0.06);
+            border-radius: 8px;
+            color: #B3D4FC;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+            text-align: left;
+        }
+
+        footer {
+            background: #2B2930;
+            color: #CAC4D0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.3);
+        }
+
+        footer a {
+            color: #82B1FF;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #B3D4FC;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .story-content {
+                font-size: 1.05em;
+                line-height: 1.9;
+            }
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .stars-small, .stars-medium, .stars-bright {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .stars-small {
+            width: 1px;
+            height: 1px;
+            box-shadow: 1309px 456px #fff, 51px 3037px #fff, 563px 1003px #fff, 457px 571px #fff, 1508px 419px #fff, 1385px 3033px #fff, 1827px 2233px #fff, 178px 2418px #fff, 864px 130px #fff, 61px 383px #fff, 447px 952px #fff, 1034px 2465px #fff, 54px 2298px #fff, 407px 2932px #fff, 1330px 2872px #fff, 1116px 1718px #fff, 451px 1839px #fff, 1206px 1139px #fff, 1657px 3560px #fff, 13px 3108px #fff, 1650px 653px #fff, 1429px 1731px #fff, 696px 1138px #fff, 318px 881px #fff, 1960px 3127px #fff, 689px 418px #fff, 189px 1556px #fff, 198px 1470px #fff, 1735px 1408px #fff, 1236px 1083px #fff, 1652px 177px #fff, 1494px 1881px #fff, 1098px 511px #fff, 1992px 3777px #fff, 775px 322px #fff, 1130px 1200px #fff, 1698px 2574px #fff, 1266px 3626px #fff, 1764px 1481px #fff, 1182px 787px #fff, 1442px 284px #fff, 93px 2708px #fff, 466px 3166px #fff, 592px 326px #fff, 1751px 953px #fff, 1774px 413px #fff, 778px 1138px #fff, 928px 2603px #fff, 1708px 1494px #fff, 333px 1516px #fff, 727px 858px #fff, 1372px 1093px #fff, 1437px 3836px #fff, 1399px 2654px #fff, 146px 2495px #fff, 1300px 700px #fff, 1093px 2986px #fff, 501px 669px #fff, 946px 1554px #fff, 552px 3790px #fff, 1310px 2818px #fff, 1140px 899px #fff, 1402px 1328px #fff, 1726px 3147px #fff, 1589px 229px #fff, 469px 3366px #fff, 65px 3297px #fff, 646px 1643px #fff, 548px 271px #fff, 432px 3740px #fff, 1931px 2323px #fff, 1794px 2940px #fff, 644px 870px #fff, 1342px 2044px #fff, 810px 3623px #fff, 1872px 2633px #fff, 939px 585px #fff, 542px 571px #fff, 505px 3051px #fff, 1149px 2207px #fff, 538px 3059px #fff, 1197px 1754px #fff, 1838px 2390px #fff, 817px 1482px #fff, 449px 566px #fff, 1043px 2021px #fff, 186px 3095px #fff, 96px 3527px #fff, 224px 626px #fff, 1285px 655px #fff, 1622px 2787px #fff, 864px 2442px #fff, 130px 1576px #fff, 781px 2440px #fff, 958px 2167px #fff, 514px 3977px #fff, 1133px 3525px #fff, 1930px 47px #fff, 1393px 2952px #fff, 234px 2792px #fff, 1812px 2199px #fff, 1537px 1092px #fff, 1574px 2625px #fff;
+            opacity: 0.4;
+        }
+
+        .stars-medium {
+            width: 2px;
+            height: 2px;
+            box-shadow: 1991px 3525px #fff, 81px 3681px #fff, 732px 860px #fff, 1396px 1022px #fff, 1365px 421px #fff, 724px 3195px #fff, 1146px 3621px #fff, 1791px 1664px #fff, 1994px 2542px #fff, 1534px 633px #fff, 1895px 3808px #fff, 484px 3541px #fff, 332px 3998px #fff, 1638px 3320px #fff, 362px 3610px #fff, 844px 101px #fff, 367px 3016px #fff, 1893px 1360px #fff, 1602px 3812px #fff, 843px 3285px #fff, 1371px 3539px #fff, 1505px 3320px #fff, 508px 1092px #fff, 326px 3225px #fff, 1436px 442px #fff, 783px 3572px #fff, 79px 3516px #fff, 963px 911px #fff, 408px 3344px #fff, 1880px 1885px #fff, 716px 1250px #fff, 1680px 3257px #fff, 1784px 932px #fff, 456px 96px #fff, 1351px 791px #fff, 816px 1344px #fff, 570px 3540px #fff, 142px 3960px #fff, 1583px 1143px #fff, 719px 2627px #fff, 1043px 1637px #fff, 1391px 3455px #fff, 1098px 1356px #fff, 1923px 113px #fff, 236px 3592px #fff, 1987px 1069px #fff, 365px 2378px #fff, 1971px 1087px #fff, 78px 444px #fff, 1221px 1779px #fff, 707px 2984px #fff, 1610px 1284px #fff, 893px 2483px #fff, 1047px 473px #fff, 788px 3684px #fff, 1180px 778px #fff, 521px 181px #fff, 1451px 1786px #fff, 3px 2129px #fff, 1895px 3303px #fff, 1102px 2813px #fff, 1473px 3851px #fff, 1519px 3018px #fff, 1373px 807px #fff, 745px 1766px #fff, 143px 3886px #fff, 1360px 3771px #fff, 676px 2552px #fff, 642px 2717px #fff, 1736px 510px #fff, 1474px 3686px #fff, 615px 2077px #fff, 633px 2731px #fff, 836px 1336px #fff, 824px 2855px #fff, 605px 2270px #fff, 260px 785px #fff, 861px 2723px #fff, 1925px 1552px #fff, 1387px 3064px #fff;
+            opacity: 0.3;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        .stars-bright {
+            width: 2px;
+            height: 2px;
+            box-shadow: 1848px 712px #fff, 1260px 2331px #fff, 616px 1663px #fff, 1122px 3414px #fff, 0px 1244px #fff, 587px 860px #fff, 880px 3218px #fff, 1187px 2484px #fff, 1340px 1319px #fff, 952px 1809px #fff, 905px 2767px #fff, 437px 2093px #fff, 969px 3251px #fff, 1845px 3931px #fff, 1630px 3014px #fff, 347px 2698px #fff, 173px 1162px #fff, 1055px 2719px #fff, 1296px 2536px #fff, 686px 382px #fff;
+            opacity: 0.6;
+            animation: twinkle 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.6; }
+        }
+
+        header, .container, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <title>Surrection - Ramindu Deshapriya</title>
+</head>
+<body>
+    <div class="stars">
+        <div class="stars-small"></div>
+        <div class="stars-medium"></div>
+        <div class="stars-bright"></div>
+    </div>
+    <header>
+        <h1>Surrection</h1>
+        <div class="social-links">
+            <a href="./">← Story List</a>
+            <a href="../sinhala-stories/uththapanaya.html">සිංහලයෙන් කියවන්න</a>
+            <a href="../">Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="story-content">
+            <p>Look, sir… Earth is beautiful, sure… but shall we go a bit further and check out a few more things? I won't charge you much extra.</p>
+            <p>Very good, sir… I knew the moment I saw you that you weren’t just some ordinary tourist, but someone who genuinely loves to explore and learn. Well then, let's head further out.</p>
+            <p>Alright, alright… it’s going to be a bit empty until we get a little ways out of the Solar System… I’m not trying to trick you, sir… past stellar explosions cleared out this area a bit… But once we get a little further, there are plenty of things to see, just be a little patient… After a short while, once we pass the Orion-Cygnus Arm of the Milky Way where our tiny Solar System sits, we'll find plenty to look at.</p>
+            <p class="ship-announcement">“Based on the ship’s speed and orientation, the current space coordinates cannot be re-entered after 300 seconds. Please confirm the ship’s flight path via the display interface or by voice.”</p>
+            <p>Sir… see that? We’ve traveled about 4,000 light-years now… and we’ve arrived near the Lagoon Nebula. Doesn’t the color look just like the Lunawa Lagoon back in Sri Lanka? Didn’t I tell you, sir, that once we went a little further there’d be some real good sights? Where else in the world could you go to see something like this? I knew you were someone who could appreciate something this important. Let's keep going.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/lagoon_nebula.jpg" alt="The Lagoon Nebula, seen in visible and infrared light">
+                <figcaption>The Lagoon Nebula<span class="credit">Image: NASA</span></figcaption>
+            </figure>
+            <p>If we go another 2,000 light-years ahead, you’ll get a prime spot to take some great photos. It’s called the Eagle Nebula. Do you see those three "Pillars of Creation" where thousands of stars are born? The very stars forming inside them are pushing away the surrounding gas and dust clouds, and in about a million years, they'll be completely gone… Good thing you came today, sir, otherwise it might not have been here next time. Did you take your photos? All good? Then let’s move forward.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/eagle_nebula.jpg" alt="The Pillars of Creation, towers of gas and dust in the Eagle Nebula">
+                <figcaption>The Eagle Nebula — the Pillars of Creation<span class="credit">Image: NASA</span></figcaption>
+            </figure>
+            <p>Sir, up until now we were in a region that looks strangely dark when viewed from Earth. The people who lived in the Andes back in the day used to look at these dark areas in the sky and form constellations out of them, just like with stars. It’s made up of dark regions like the Aquila Rift. We’ll be stepping out of it in a moment, and after that, the stars will show up nice and clear.</p>
+            <p>Sir… there are two nebulae you don’t get to see every day, but we’d have to take a slight detour off the main path… My rate will be a little higher, but it’s totally worth seeing. What do you think, sir? It won’t cost much, and if I had the chance to see something like this, I'd pay whatever they asked. We're going to see the Trifid Nebula and the Omega Nebula… Alright, alright, it’ll take a little time, sir, just be patient. As we travel, I’ll tell you a bit about them… The Trifid Nebula is like a chaotic mix of all sorts of things: a dust cloud that hasn't taken a definite shape yet, with stars forming on one side making the dust glow red, and on the other side, reflected light glowing blue. The Omega Nebula is the fastest star-making factory in our galaxy. Some people call the Omega Nebula the Swan Nebula, while others call it the Lobster Nebula. I suppose everyone sees it differently. To me, it looks like a wide-open mouth about to swallow a chunk of the universe.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/trifid_nebula.jpg" alt="Clouds of gas and dust glowing red and blue in the Trifid Nebula">
+                <figcaption>The Trifid Nebula<span class="credit">Image: NASA</span></figcaption>
+            </figure>
+            <figure class="story-figure">
+                <img src="../nasa_images/omega_nebula.jpg" alt="The Omega Nebula, a bright star-forming cloud shaped like an open mouth">
+                <figcaption>The Omega Nebula<span class="credit">Image: NASA</span></figcaption>
+            </figure>
+            <p>See that? Beautiful, just like I said, right?</p>
+            <p>We are now in the Norma Arm of the Milky Way. For some reason, this arm is moving away from the galactic center faster than the other arms. Why would anyone want to leave a galaxy as beautiful as this, right?</p>
+            <p>Sir, in a little while, we’ll be heading into the Milky Way’s inner disk. Before that, what do you say to some nice hospitality and a good cup of tea? One of my cousins runs a small tea shop right around where you get a great view of the Arches Cluster… We could drop in for a moment there, right? He’s a good-hearted kid, he won’t charge you much. Ah, look at you, sir, doubting everything I say… Just have a cup of tea from his shop yourself and tell me whether it's good or not.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/arches_cluster.jpg" alt="The Arches Cluster, a dense knot of stars near the centre of the Milky Way">
+                <figcaption>The Arches Cluster<span class="credit">Image: NASA</span></figcaption>
+            </figure>
+            <p class="ship-announcement">“Warning: If the vessel maintains its current orientation and speed, severe gravitational forces may cause irreversible damage to the ship. Please confirm the ship’s flight path via the display interface or by voice.”</p>
+            <p>Sir, you can probably see the bulge at the center of the Milky Way now; that’s where we’re heading next. Depending on the angle you look at it from, it looks like an X-shape or even a peanut shell. You’ll be able to count millions of stars on our way to our final attraction. Gravitational interactions across the Milky Way’s disk are what formed this bulged shape.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/milky_way_bulge.jpg" alt="The bulge at the centre of the Milky Way, a dense glow of stars behind dust lanes">
+                <figcaption>The central bulge of the Milky Way<span class="credit">Image: NASA</span></figcaption>
+            </figure>
+            <p>Anyway… now we’ve arrived at the beginning of the final stretch of our journey. The stars around here are like a swarm of flies buzzing around the ogre at the center of the Milky Way, just out of its reach. Some of the stars in this region orbit the galactic center at nearly 3% of the speed of light.</p>
+            <p>Sir, we’ve come about 26,000 light-years from where we started… right to the center of the Milky Way. Can you see it? …Haha, actually, there’s nothing to see… At the center of our galaxy lies a massive black hole. Its name is Sagittarius A*. Our entire Milky Way rotates around this. You won’t be able to take photos of it, sir, but you can see the glowing accretion disk around the black hole; that’s just matter and light slowly swirling around the monster’s mouth before falling inside… Ah, sir, you never believe a word I say, do you? But I’m telling you the absolute truth, sir.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/sgra_blackhole_eht.png" alt="Sagittarius A*, a dark centre ringed by glowing orange light">
+                <figcaption>Sagittarius A*<span class="credit">Image: EHT Collaboration / NASA</span></figcaption>
+            </figure>
+            <p>Sir, now we are right on the edge of the Sagittarius A* black hole. You can see it, right? …Ah, my mistake again. We’re about to enter that pitch-black spot where you can’t see a thing. As we slowly head inside, time is going to feel very strange to you, but don’t worry, that’s just how black holes are. The most important thing is to enjoy the journey without worrying too much about what’s waiting at the end. Let's keep going forward. You know, sir, I’m a family man with kids… you could think about making that tip a bit generous, couldn’t you? Won’t be a big deal for you, but it makes a world of difference for me.</p>
+            <p class="ship-announcement">“Severe Warning: Vessel is subject to extreme gravitational pull. Unable to alter current trajectory. Severe Warning: Vessel is subject to extreme gravitational pull. Unable to alter current trajectory. Severe Warning: Vessel is subject to extreme gravity…”</p>
+            <hr class="story-divider">
+            <p>In a house, someone had dropped a marble into the bathroom sink. The marble spun around the circumference of the basin over and over until it finally fell down the drainpipe. Nobody ever saw that marble again.</p>
+            <p>A long time passed, and the house became empty, slowly falling into ruin. The bathroom sink decayed and crumbled away. What became of the marble that fell inside, nobody ever knew…</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ramindu Deshapriya. All rights reserved.</p>
+        <p><a href="./">Story List</a></p>
+    </footer>
+</body>
+</html>

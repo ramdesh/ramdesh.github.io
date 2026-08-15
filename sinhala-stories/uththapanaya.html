@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDFMDXD22B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LDFMDXD22B');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+Sinhala:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #E6E1E5;
+            background: #1C1B1F;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #2B2930;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-family: 'Noto Sans Sinhala', 'Roboto', serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #82B1FF;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #CAC4D0;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #82B1FF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 10px 24px;
+            border-radius: 20px;
+            background: rgba(130, 177, 255, 0.08);
+        }
+
+        .social-links a:hover {
+            background: rgba(130, 177, 255, 0.16);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            font-family: 'Noto Sans Sinhala', 'Roboto', serif;
+            font-size: 2em;
+            color: #E6E1E5;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .story-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .story-link {
+            font-family: 'Noto Sans Sinhala', 'Roboto', serif;
+            display: block;
+            background: #2B2930;
+            border: 1px solid #49454F;
+            border-radius: 16px;
+            padding: 24px 30px;
+            text-decoration: none;
+            color: #82B1FF;
+            font-size: 1.4em;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+
+        .story-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 8px 16px rgba(0,0,0,0.3);
+            background: #322F37;
+        }
+
+        .story-content {
+            font-family: 'Noto Sans Sinhala', 'Roboto', serif;
+            font-size: 1.15em;
+            line-height: 2;
+            color: #CAC4D0;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        .story-figure {
+            margin: 2.5em auto;
+            max-width: 800px;
+        }
+
+        .story-figure img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .story-figure figcaption {
+            margin-top: 0.75em;
+            font-size: 0.85em;
+            line-height: 1.5;
+            color: #9E9AA7;
+            text-align: center;
+        }
+
+        .story-figure figcaption .credit {
+            display: block;
+            font-size: 0.9em;
+            color: #7C7889;
+        }
+
+        .ship-announcement {
+            margin: 2em auto;
+            padding: 16px 20px;
+            max-width: 700px;
+            border-left: 3px solid #82B1FF;
+            background: rgba(130, 177, 255, 0.06);
+            border-radius: 8px;
+            color: #B3D4FC;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+            text-align: left;
+        }
+
+        .story-divider {
+            border: none;
+            border-top: 1px solid #49454F;
+            margin: 2em auto;
+            width: 60%;
+        }
+
+        footer {
+            background: #2B2930;
+            color: #CAC4D0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.3);
+        }
+
+        footer a {
+            color: #82B1FF;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #B3D4FC;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .story-content {
+                font-size: 1.05em;
+                line-height: 1.9;
+            }
+
+            .story-link {
+                font-size: 1.2em;
+            }
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .stars-small, .stars-medium, .stars-bright {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .stars-small {
+            width: 1px;
+            height: 1px;
+            box-shadow: 1309px 456px #fff, 51px 3037px #fff, 563px 1003px #fff, 457px 571px #fff, 1508px 419px #fff, 1385px 3033px #fff, 1827px 2233px #fff, 178px 2418px #fff, 864px 130px #fff, 61px 383px #fff, 447px 952px #fff, 1034px 2465px #fff, 54px 2298px #fff, 407px 2932px #fff, 1330px 2872px #fff, 1116px 1718px #fff, 451px 1839px #fff, 1206px 1139px #fff, 1657px 3560px #fff, 13px 3108px #fff, 1650px 653px #fff, 1429px 1731px #fff, 696px 1138px #fff, 318px 881px #fff, 1960px 3127px #fff, 689px 418px #fff, 189px 1556px #fff, 198px 1470px #fff, 1735px 1408px #fff, 1236px 1083px #fff, 1652px 177px #fff, 1494px 1881px #fff, 1098px 511px #fff, 1992px 3777px #fff, 775px 322px #fff, 1130px 1200px #fff, 1698px 2574px #fff, 1266px 3626px #fff, 1764px 1481px #fff, 1182px 787px #fff, 1442px 284px #fff, 93px 2708px #fff, 466px 3166px #fff, 592px 326px #fff, 1751px 953px #fff, 1774px 413px #fff, 778px 1138px #fff, 928px 2603px #fff, 1708px 1494px #fff, 333px 1516px #fff, 727px 858px #fff, 1372px 1093px #fff, 1437px 3836px #fff, 1399px 2654px #fff, 146px 2495px #fff, 1300px 700px #fff, 1093px 2986px #fff, 501px 669px #fff, 946px 1554px #fff, 552px 3790px #fff, 1310px 2818px #fff, 1140px 899px #fff, 1402px 1328px #fff, 1726px 3147px #fff, 1589px 229px #fff, 469px 3366px #fff, 65px 3297px #fff, 646px 1643px #fff, 548px 271px #fff, 432px 3740px #fff, 1931px 2323px #fff, 1794px 2940px #fff, 644px 870px #fff, 1342px 2044px #fff, 810px 3623px #fff, 1872px 2633px #fff, 939px 585px #fff, 542px 571px #fff, 505px 3051px #fff, 1149px 2207px #fff, 538px 3059px #fff, 1197px 1754px #fff, 1838px 2390px #fff, 817px 1482px #fff, 449px 566px #fff, 1043px 2021px #fff, 186px 3095px #fff, 96px 3527px #fff, 224px 626px #fff, 1285px 655px #fff, 1622px 2787px #fff, 864px 2442px #fff, 130px 1576px #fff, 781px 2440px #fff, 958px 2167px #fff, 514px 3977px #fff, 1133px 3525px #fff, 1930px 47px #fff, 1393px 2952px #fff, 234px 2792px #fff, 1812px 2199px #fff, 1537px 1092px #fff, 1574px 2625px #fff, 696px 456px #fff, 601px 1780px #fff, 323px 1858px #fff, 6px 3906px #fff, 1478px 3587px #fff, 1473px 1078px #fff, 1990px 2050px #fff, 1560px 731px #fff, 1039px 3738px #fff, 217px 3565px #fff, 1280px 1222px #fff, 1723px 2617px #fff, 1039px 2494px #fff, 407px 626px #fff, 765px 3123px #fff, 330px 2209px #fff, 1952px 3189px #fff, 1889px 2172px #fff, 1881px 2px #fff, 1226px 1327px #fff, 1000px 79px #fff, 229px 3805px #fff, 743px 3599px #fff, 1703px 3304px #fff, 629px 980px #fff, 118px 986px #fff, 1798px 2323px #fff, 1939px 322px #fff, 175px 2997px #fff, 995px 3342px #fff, 141px 3115px #fff, 1090px 3136px #fff, 257px 525px #fff, 1351px 1946px #fff, 1939px 2251px #fff, 338px 1085px #fff, 1080px 3573px #fff, 1242px 1733px #fff, 1975px 867px #fff, 1902px 2208px #fff, 1546px 2989px #fff, 1412px 823px #fff, 1460px 1276px #fff, 817px 2751px #fff, 1330px 1529px #fff, 897px 3684px #fff, 1059px 1849px #fff, 247px 1015px #fff, 460px 262px #fff, 692px 86px #fff, 1204px 2268px #fff, 471px 2410px #fff, 451px 29px #fff, 145px 2899px #fff, 1292px 241px #fff, 468px 276px #fff, 1854px 128px #fff, 1760px 1353px #fff, 145px 2105px #fff, 487px 1140px #fff, 1370px 1988px #fff, 438px 2208px #fff, 270px 2962px #fff, 1915px 3614px #fff, 1169px 2360px #fff, 968px 995px #fff, 1606px 1937px #fff, 1653px 1667px #fff, 389px 386px #fff, 198px 2699px #fff, 882px 1451px #fff, 867px 1683px #fff, 956px 3538px #fff, 1493px 221px #fff, 1379px 2676px #fff, 1323px 403px #fff, 124px 1649px #fff, 1491px 1389px #fff, 1639px 3529px #fff, 223px 1018px #fff, 392px 779px #fff, 1098px 1837px #fff, 287px 1728px #fff, 375px 1140px #fff, 947px 1023px #fff, 1790px 3781px #fff, 154px 1815px #fff, 1654px 3528px #fff, 1753px 2254px #fff, 200px 207px #fff, 1335px 2214px #fff, 1712px 60px #fff, 1984px 382px #fff, 1897px 3086px #fff, 1738px 968px #fff, 340px 1664px #fff, 994px 1971px #fff, 437px 3541px #fff, 821px 3696px #fff, 120px 674px #fff, 776px 8px #fff, 799px 1086px #fff, 1897px 3211px #fff, 1607px 1863px #fff, 584px 1732px #fff, 1426px 3921px #fff, 1496px 3208px #fff, 1138px 2711px #fff, 1471px 1993px #fff, 317px 777px #fff, 607px 891px #fff, 1983px 239px #fff, 1186px 3013px #fff, 1110px 249px #fff, 1531px 1284px #fff, 117px 205px #fff, 1196px 1952px #fff, 1029px 3765px #fff, 1746px 2175px #fff, 322px 232px #fff, 1967px 2080px #fff, 164px 3487px #fff, 380px 280px #fff, 1218px 278px #fff, 1382px 3530px #fff, 481px 1653px #fff, 245px 3856px #fff, 1823px 2333px #fff, 504px 2371px #fff, 1217px 162px #fff, 1268px 335px #fff, 858px 2692px #fff, 1195px 2315px #fff, 1070px 1295px #fff, 1914px 1068px #fff, 418px 2743px #fff, 1466px 1286px #fff, 488px 1087px #fff, 810px 536px #fff, 1375px 2643px #fff, 614px 1872px #fff, 647px 3805px #fff, 1539px 3832px #fff, 148px 38px #fff, 938px 2544px #fff, 1153px 409px #fff, 150px 2202px #fff, 436px 2072px #fff, 543px 542px #fff, 1911px 1429px #fff, 1804px 281px #fff, 1800px 1000px #fff, 756px 1167px #fff, 323px 1794px #fff, 1707px 2225px #fff, 1440px 1239px #fff, 1252px 3305px #fff, 1339px 2166px #fff, 16px 2735px #fff, 1673px 2271px #fff, 613px 3816px #fff, 1358px 424px #fff, 1922px 3596px #fff, 275px 1083px #fff, 236px 3644px #fff, 219px 3040px #fff, 1133px 636px #fff, 557px 1154px #fff, 1238px 862px #fff, 1469px 1404px #fff, 416px 2815px #fff, 1298px 3493px #fff, 540px 2070px #fff, 1000px 1028px #fff, 1854px 3719px #fff, 1732px 208px #fff, 189px 2598px #fff, 867px 3397px #fff, 566px 180px #fff, 7px 1366px #fff, 1579px 535px #fff, 1304px 1072px #fff, 330px 3036px #fff, 904px 2259px #fff, 1445px 1751px #fff, 1148px 39px #fff, 229px 308px #fff, 1935px 3617px #fff, 1415px 3702px #fff, 305px 2234px #fff, 73px 3418px #fff, 756px 2385px #fff, 1131px 606px #fff, 880px 522px #fff, 85px 1262px #fff, 746px 3682px #fff, 1910px 3260px #fff;
+            opacity: 0.4;
+        }
+
+        .stars-medium {
+            width: 2px;
+            height: 2px;
+            box-shadow: 1991px 3525px #fff, 81px 3681px #fff, 732px 860px #fff, 1396px 1022px #fff, 1365px 421px #fff, 724px 3195px #fff, 1146px 3621px #fff, 1791px 1664px #fff, 1994px 2542px #fff, 1534px 633px #fff, 1895px 3808px #fff, 484px 3541px #fff, 332px 3998px #fff, 1638px 3320px #fff, 362px 3610px #fff, 844px 101px #fff, 367px 3016px #fff, 1893px 1360px #fff, 1602px 3812px #fff, 843px 3285px #fff, 1371px 3539px #fff, 1505px 3320px #fff, 508px 1092px #fff, 326px 3225px #fff, 1436px 442px #fff, 783px 3572px #fff, 79px 3516px #fff, 963px 911px #fff, 408px 3344px #fff, 1880px 1885px #fff, 716px 1250px #fff, 1680px 3257px #fff, 1784px 932px #fff, 456px 96px #fff, 1351px 791px #fff, 816px 1344px #fff, 570px 3540px #fff, 142px 3960px #fff, 1583px 1143px #fff, 719px 2627px #fff, 1043px 1637px #fff, 1391px 3455px #fff, 1098px 1356px #fff, 1923px 113px #fff, 236px 3592px #fff, 1987px 1069px #fff, 365px 2378px #fff, 1971px 1087px #fff, 78px 444px #fff, 1221px 1779px #fff, 707px 2984px #fff, 1610px 1284px #fff, 893px 2483px #fff, 1047px 473px #fff, 788px 3684px #fff, 1180px 778px #fff, 521px 181px #fff, 1451px 1786px #fff, 3px 2129px #fff, 1895px 3303px #fff, 1102px 2813px #fff, 1473px 3851px #fff, 1519px 3018px #fff, 1373px 807px #fff, 745px 1766px #fff, 143px 3886px #fff, 1360px 3771px #fff, 676px 2552px #fff, 642px 2717px #fff, 1736px 510px #fff, 1474px 3686px #fff, 615px 2077px #fff, 633px 2731px #fff, 836px 1336px #fff, 824px 2855px #fff, 605px 2270px #fff, 260px 785px #fff, 861px 2723px #fff, 1925px 1552px #fff, 1387px 3064px #fff;
+            opacity: 0.3;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        .stars-bright {
+            width: 2px;
+            height: 2px;
+            box-shadow: 1848px 712px #fff, 1260px 2331px #fff, 616px 1663px #fff, 1122px 3414px #fff, 0px 1244px #fff, 587px 860px #fff, 880px 3218px #fff, 1187px 2484px #fff, 1340px 1319px #fff, 952px 1809px #fff, 905px 2767px #fff, 437px 2093px #fff, 969px 3251px #fff, 1845px 3931px #fff, 1630px 3014px #fff, 347px 2698px #fff, 173px 1162px #fff, 1055px 2719px #fff, 1296px 2536px #fff, 686px 382px #fff;
+            opacity: 0.6;
+            animation: twinkle 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.6; }
+        }
+
+        header, .container, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <title>උත්ථාපනය - Ramindu Deshapriya</title>
+</head>
+<body>
+    <div class="stars">
+        <div class="stars-small"></div>
+        <div class="stars-medium"></div>
+        <div class="stars-bright"></div>
+    </div>
+    <header>
+        <h1>උත්ථාපනය</h1>
+        <div class="social-links">
+            <a href="./">← කතා ලැයිස්තුව</a>
+            <a href="../english-stories/uththapanaya.html">Read in English</a>
+            <a href="../">Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="story-content">
+            <p>සර් මේ...පෘථිවිය ලස්සනයි තමයි...ඒත් තව පොඩ්ඩක් එහාට ගිහිල්ල තව දේවල් ටිකක් බලමුද? මම වැඩි ගානක් ගන්නේ නෑ.</p>
+            <p>බොහොම හොඳයි සර්...මම දැනගත්තා සර්ව දැක්ක ගමන්ම නිකං ටුවරිස්ට් කෙනෙක් නෙමෙයි, දේවල් හොයල බලල දැනගන්න කැමති කෙනෙක් බව. එහෙනම් අපි තව ඉස්සරහට ගිහන් බලමු.</p>
+            <p>හරි හරි...අපි සෞරග්‍රහ මණ්ඩලයෙන් ටික දුරක් යනකන් හිස් තමයි...මම සර්ව අන්දන්න නෙමෙයි හදන්නෙ...ඉස්සර වෙච්ච තරු පිපිරීම් වලින් මේ පැත්ත පොඩ්ඩක් සුද්ද වෙලා තියෙන්නෙ...තව ටිකක් ඉස්සරහට ගිය ගමන් බලන්න ඕන තරම් දේවල් තියනවා, පොඩ්ඩක් ඉවසලා ඉන්නකෝ...ටික වෙලාවක් යද්දී අපේ පොඩි සෞරග්‍රහ මණ්ඩලය තියන ක්ෂිරපථයේ ඔරායන්-සිග්නස් බාහුව පහු කරලා බලන්න දේවල් ගොඩක් අපට හොයාගන්න පුලුවන් වෙයි.</p>
+            <p class="ship-announcement">"යානයේ වේගය හා දිශානතිය අනුව තවත් තත්පර 300කට පසුව දැනට සිටිනා අවකාශ ඛණ්ඩාංක වලට නැවතත් ඇතුලු විය නොහැකියි. කරුණාකර තිර මුහුණත මඟින් හෝ වචනයෙන් යානයේ ගමන් පථය තහවුරු කරන්න"</p>
+            <p>සර්...පේනව නේද අපි දැන් ආලෝක වර්ෂ 4000ක් විතර ගමන් කරලා...කලපු නෙබියුලාව ගාවට ඇවිත්. ලංකාවෙ ලුනාව කලපුව වගේ නේද මේකෙ පාට? මම කිව්වනෙ සර්ට පොඩ්ඩක් ඉස්සරහට ගිය ගමන් නියම බඩු තියනව කියල...ලෝකෙ කොහෙවත් ගිහින් මේ වගෙ දෙයක් බලන්න පුලුවන්ද? මම දන්නව සර් මේ වගේ වැදගත් දෙයක් තේරුම්ගන්න පුලුවන් කෙනෙක් බව. තවත් දිගටම යමු.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/lagoon_nebula.jpg" alt="කලපු නෙබියුලාව">
+                <figcaption>කලපු නෙබියුලාව<span class="credit">රූපය: නාසා</span></figcaption>
+            </figure>
+            <p>තව ආලෝක වර්ෂ 2000ක් ඉස්සරහට ගියොත් සර්ට ලස්සන ෆොටෝ ටිකක් ගන්න නියම ස්පොට් එකක් සෙට් වෙනවා. ඒකෙ නම රාජාලි නෙබියුලාව. තරු දහස් ගනන් හැදෙන "උත්පත්ති කුලුණු" තුන සර්ට පේනවද? ඒව වල හැදෙන තරු වලින්ම ඒවා වල තියන වායු, දූවිලි වළාකුලු එහාට මෙහාට තල්ලු වෙලා තව අවුරුදු මිලියනයකින් විතර ඒවා නැති වෙලා යනවා...හොඳ වෙලාවට අද සර් ආවෙ, නැත්තම් ඊළඟ පාර එද්දී මේක නැති වෙලා තියෙන්නත් ඉඩ තිබ්බා. සර් ෆොටෝ ගත්ත ද? හරි නේ? එහෙනම් ඉස්සරහට යමු.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/eagle_nebula.jpg" alt="රාජාලි නෙබියුලාවේ උත්පත්ති කුලුණු">
+                <figcaption>රාජාලි නෙබියුලාව — "උත්පත්ති කුලුණු"<span class="credit">රූපය: නාසා</span></figcaption>
+            </figure>
+            <p>සර්, අපි මෙච්චර් වෙලාවක් හිටියේ පෘථිවියේ ඉඳන් බැලුවම අමුතු අඳුරක් පේන හරියක. අන්දීස් කඳු වල ජීවත් වෙච්ච මිනිස්සු ඉස්සර අහසේ මේ අඳුරු ප්‍රදේශය බලලා ඒකත් තරු වගේ ම හැඩතල යොදලා රාශි හැටියට පාවිච්චි කළා. ඇක්විලා බෙදුම වගේ අඳුරු ප්‍රදේශ වලින් තමයි මේක හැදිලා තියෙන්නෙ. තව ටිකකින් අපි ඒකෙන් එළියට යනවා, ඊට පස්සෙ තරු එහෙම හොඳට පේන්න ගනියි.</p>
+            <p>සර්...හැමදාම බලන්න හම්බවෙන්නෙ නැති නෙබියුලා දෙකක් බලාගන්න පුලුවන් ඒත් පාරෙන් පොඩ්ඩක් පිට යන්න වෙනවා...මගේ ගාන පොඩ්ඩක් වැඩි වෙයි ඒත් මේක බලන්න වටිනවා. මොකද සර් හිතන්නෙ? ලොකු ගානක් යන්නෙ නෑ සර් මේක බලන්න හම්බවෙනව නම් මම නම් ඉල්ලන ගානක් ගෙවනවා. ත්‍රිත්ව නෙබියුලාවයි ඔමෙගා නෙබියුලාවයි තමයි අපි දැන් බලන්න යන්නෙ...හරි හරි, ටිකක් වෙලාව යනවා තමයි සර් පොඩ්ඩක් ඉවසලා ඉන්නකෝ. අපි යන ගමන් මම මේ දෙක ගැන ටිකක් කියන්නම්.. ත්‍රිත්ව නෙබියුලාව හරියට ආඩි හත්දෙනාගෙ කැඳ හැලිය වගේ එක එක ඒවායින් හැදිච්ච තවමත් හරියටම හැඩරුවක් අරගෙන නැති දූවිලි වලාවක්, එක පැත්තක තරු හදලා රතු පාටට පේන දූවිලි වලාකුලක්, අනිත් පැත්තෙන් ඒ ආලෝකය වැදිලා දිලෙන නිල් පාට වලාකුලක්. ඒකටත් එහායින් ඒ දෙකෙන් වැටෙන තඩි හෙවනැල්ලක්. ඔමෙගා නෙබියුලාව අපේ මණ්දාකිණියේ වේගයෙන්ම තරු හදන ෆැක්ටරියක්. ඔමෙගා නෙබියුලාවට නම් සමහර කට්ටිය හංස නෙබියුලාව කියලත් කියනවා, තවත සමහරු පොකිරිස්සා නෙබියුලාව කියලත් කියනවා. එක එක අයට ඒක පේන විදිය වෙන්න ඇති නේ. මට නම් ඒක විශ්වයෙන් කෑල්ලක් ගිලින්න ඉන්න කටක් වගේ පේනනෙ.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/trifid_nebula.jpg" alt="ත්‍රිත්ව නෙබියුලාව">
+                <figcaption>ත්‍රිත්ව නෙබියුලාව<span class="credit">රූපය: නාසා</span></figcaption>
+            </figure>
+            <figure class="story-figure">
+                <img src="../nasa_images/omega_nebula.jpg" alt="ඔමෙගා නෙබියුලාව">
+                <figcaption>ඔමෙගා නෙබියුලාව<span class="credit">රූපය: නාසා</span></figcaption>
+            </figure>
+            <p>දැක්කානේ? මම කිව්ව වගේම ලස්සනයි නේ?</p>
+            <p>අපි දැන් ඉන්නෙ ක්ෂිරපථයේ නෝරමා බාහුවේ. මේ බාහුව මොකක් හරි හේතුවක් නිසා අපේ මණ්දාකිනියේ අනිත් බාහු වලට වඩා වේගයෙන් කේන්ද්‍රයෙන් එළියට ගමන් කරනවා. ඇයි මේ වගේ ලස්සන මණ්දාකිනියක් එහෙම දාලා යන්න හදන්නේ, නේද?</p>
+            <p>සර් තව ටික වෙලාවකින් අපි ක්ෂිරපථයේ ඇතුලු තැටියට යනවා. ඊට කලින් මොකද කියන්නෙ, ආචස් තරුපොකුර ලස්සනට පේන හරියක මගේ මල්ලි කෙනෙක් පොඩ් තේ කඩයක් කරනවා... පොඩ්ඩක් නැවතිලා තේ එකක් බීලා යමු නේ? ඒකා හිත හොඳ කොල්ලා, ඌ ලොකු ගානක් ගන්නෙ නෑ. ඔන්න ඉතිං සර් මම කියන හැම එකම සැක කරනවනෙ...සර්ම මල්ලිගෙ කඩෙන් තේ එකක් බීලා බලලා මට කියන්නකො හොඳද නැද්ද කියලා.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/arches_cluster.jpg" alt="ආචස් තරුපොකුර">
+                <figcaption>ආචස් තරුපොකුර<span class="credit">රූපය: නාසා</span></figcaption>
+            </figure>
+            <p class="ship-announcement">අවවාදයයි. යානය වත්මන් දිශානතිය හා වේගය ඔස්සේ ගමන් කළහොත් අධික ගුරුත්වය යටතේ යානයට අප්‍රතිවර්ත්‍ය හානි සිදුවිය හැකියි. කරුණාකර තිර මුහුණත මඟින් හෝ වචනයෙන් යානයේ ගමන් පථය තහවුරු කරන්න.</p>
+            <p>සර් ට දැන් පේනවා ඇති ක්ෂිරපථයේ මැද පිම්බුණු ප්‍රදේශයක්, ඒ හරියට තමයි අපි ඊළඟට යන්නෙ. මේකත් එක එක පැති වලින බැලුවම කතිරයක්, රටකජු ඇටයක් වගේ හැඩයකටත් පේනවා. අන්තිමට සර්ට මම පෙන්නන්න යන අයිටම් එකට කලින් අපට මේ හරියේ තියන මිලියන ගනන් තරු බලන්න පුලුවන්. ක්ෂිරපථයේ තැටි වල ඇති වෙච්ච ගුරුත්ව ගැටීම් නිසා තමයි මේ හරියෙ මෙහෙම පිම්බිලා වගේ හැදිලා තියෙන්නෙ.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/milky_way_bulge.jpg" alt="ක්ෂිරපථයේ මැද පිම්බුණු ප්‍රදේශය">
+                <figcaption>ක්ෂිරපථයේ මැද පිම්බුණු ප්‍රදේශය<span class="credit">රූපය: නාසා</span></figcaption>
+            </figure>
+            <p>කොහොම කොහොම හරි...දැන් අපි ඇවිල්ලා අපේ ගමනේ අන්තිම හරියේ මුල් හරියට. .මේ හරියේ තියන තරු ක්ෂිරපථයේ මැද්දේ ඉන්න රකුසා වටේට දුවන, එයාට අල්ලන්න බැරි මැස්සො රැළක් වගේ. මේ හරියේ තියන සමහර තරු ආලෝකයේ වේගයන් 3%ක විතර වේගයකින් මණ්දාකිණි මධ්‍යය වටේ භ්‍රමණය වෙනවා.</p>
+            <p>සර්, අපි පටන් ගත්ත තැන ඉඳන් දැන් ආලෝක වර්ෂ 26,000ක විතර දුරකට අපි දැන් ඇවිල්ලා ඉන්නෙ...ක්ෂිරපථයේ හරි මැද්දට. පේනවා නේද?...හහා ඇත්තටම කියනවා නම් පේන්න දෙයක් නෑ...අපේ මණ්දාකිනිය මැද්දේ තියෙන්නෙ විශාල කලු කුහරයක්. ඒකේ නම සැජිටේරියස් ඒ*. අපේ මුලු ක්ෂිරපථයම කැරකෙන්නේ මේක වටේට තමයි. සර්ට මේකෙ නම් ෆොටෝ ගන්න බැරි වෙයි, ඒත් කලු කුහරය වටේ තියන ආලෝක තැටිය පේනවා නේ, ඒ ඉතිං කලු කුහරය රකුසෙක් වගේ චුට්ට චුට්ච ගිලින පදාර්ථයයි, ආලෝකයයි ඒක වටේට හෙමීට කැරකිලා ඒක ඇතුළට වැටෙන පාර තමයි. ...සර් ඉතින් මම කියන කිසිම දෙයක් පිළිගන්නනෙ නෑ නෙ...මම කියන්නෙ ඇත්තම කතාව සර්.</p>
+            <figure class="story-figure">
+                <img src="../nasa_images/sgra_blackhole_eht.png" alt="සැජිටේරියස් ඒ* කලු කුහරය">
+                <figcaption>සැජිටේරියස් ඒ*<span class="credit">රූපය: EHT Collaboration / නාසා</span></figcaption>
+            </figure>
+            <p>සර් දැන් අපි ඉන්නෙ සැජිටේරියස් ඒ* කලු කුහරයේ කොනේ. සර්ට පේනව නේ...ආයෙත් වැරදුනා. සර්ට මුකුත් පේන්නෙ නැති කලු පාට තැනට තමයි අපි දැන් යන්න හදන්නේ. හෙමීට මේක ඇතුලට යද්දී සර්ට කාලය කියන දේ එක එක විදියට තේරෙන්න ගනියි, ගනන් ගන්න එපා කලු කුහර එහෙම තමයි. වැදගත්ම දේ අන්තිමට හම්බවෙන දේ ගැන වැඩිය හිතන්නෙ නැතුව ගමන යන එක. අපි ඉස්සරහටම යමු. සර් දන්නවනේ, මම දරු පවුල්කාරයෙක්, පොඩි ගානක් වැඩියෙන් දුන්නට සර්ට වැඩිය දැනෙන්නෙ නෑ නෙ, ඒ උනාට ඒක මට ලොකු දෙයක්.</p>
+            <p class="ship-announcement">දැඩි අවවාදයයි. යානය අධික ගුරුත්වයට ලක්ව තිබෙනවා. වත්මන් ගමන් පථයෙන් ඉවත්විය නොහැකියි. දැඩි අවවාදයයි. යානය අධික ගුරුත්වයට ලක්ව තිබෙනවා. වත්මන් ගමන් පථයෙන් ඉවත්විය නොහැකියි. දැඩි අවවාදයයි. යානය අධික ගුරුත්වයට...</p>
+            <hr class="story-divider">
+            <p>ගෙදරක, නාන කාමරයේ සින්ක් එකට කවුරු හරි ටීක් බෝලයක් දාලා තිබ්බා. ටී්ක් බෝලය වතුර බේසමේ වටප්‍රමාණය දිගේ කැරකිලා කැරකිලා අන්තිමට යට පයිප්පයට වැටුණා. ආපහු කවුරුත් ඒ ටීක් බෝලෙ දැක්කෙ නෑ.</p>
+            <p>සෑහෙන කාලෙකට පස්සෙ ඒ ගෙදර කවුරුත් නැති වෙලා, ගෙදර ජරාජීර්ණ වෙලා ගියා. නාන කාමරේ තිබ්බ සින්ක් එකත් පරණ වෙලා විනාශ උනා. ඒකට වැටිලා තිබ්බ ටීක් බෝලෙට උනේ මොකක්ද කියලා කවුරුත් දන්නේ නෑ...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ramindu Deshapriya. All rights reserved.</p>
+        <p><a href="./">කතා ලැයිස්තුව</a></p>
+    </footer>
+</body>
+</html>
